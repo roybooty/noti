@@ -73,7 +73,7 @@ export const UpdateNote = async (req, res, next) => {
 
 		if(!note){
 			const error = new Error("could not find note");
-			error.statusCode(404);
+			error.statusCode = 404;
 			throw error;
 		}
 
