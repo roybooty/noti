@@ -1,5 +1,12 @@
-import mongoose from "mongoose"
-import {DB_URI} from "../config/env.js"
+import mongoose from "mongoose";
+import process from "node:process";
+import {DB_URI} from "../config/env.js";
+
+
+if(!DB_URI){
+	console.log("Mongodb URI not provided");
+}
+
 
 const connectToDb = async () => {
 	try {
